@@ -1,0 +1,64 @@
+nav, .logo{
+    background-color: #000;
+    font-size: large;
+    padding:6px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+i{
+    background-color: #000;
+    color: #fff;
+    
+}
+span{
+    color: red;
+    background-color: #000;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.btn-sign-up,
+.btn-log-in{
+    padding:2px 10px;
+    background-color: red;
+    color:#fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    /* font-weight: 600; */
+    font-size: 15px;
+    text-decoration: none;
+}
+.btn-sign-up:hover,
+.btn-log-in:hover {
+    background-color: #E50914;
+    /* color: #fff; */
+    /* border: 2px solid red; */
+}
+@media (max-width: 700px) {
+    .btn-sign-up,
+    .btn-log-in{
+        display: none;
+    }
+
+}
+@media (max-width: 500px){
+    .logo{
+        display: none;
+    }
+    .search {
+        justify-content: center;
+        width: 100%;
+    
+    }
+    .btn button{
+    margin-top: -13px;
+    }
+
+
+}
