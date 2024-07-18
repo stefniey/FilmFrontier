@@ -1,5 +1,5 @@
 import MovieInfo from './MovieInfo/MovieInfo';
-import Search from './Search/search';
+import Search from './Cherche/Search';
 import MovieDetailsPage from './MovieDetailsPage/MovieDetailsPage';
 
 export{

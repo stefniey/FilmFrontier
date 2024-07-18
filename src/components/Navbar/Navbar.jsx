@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import Search from '../../container/Search/search';
+import Search from '../../container/Cherche/Search';
 
 
 const Navbar = () => {
