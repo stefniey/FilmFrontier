@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Search.css';
 
-const Search = () => {
+const search = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
 
@@ -36,4 +36,7 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default search;
+
+
+
