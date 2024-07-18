@@ -1,0 +1,65 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Login.css';
+
+const Login = () => {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
+
+    const authenticate = (enteredUsername, enteredPassword) => {
+        return enteredUsername === 'yourUsername' && enteredPassword === 'yourPassword';
+    };
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+
+        // Validate username and password
+        if (username.trim() === '' || password.trim() === '') {
+            setError('Please fill in both username and password.');
+        } else {
+            setError('');
+
+            if (authenticate(username, password)) {
+                console.log('Login successful. Redirecting to Home page.');
+
+            }
+            else {
+                navigate('/');
+
+
+            }
+        }
+    };
+
+    return (
+        <section>
+            <div className="login-container">
+                <h2>Login</h2>
+                <form onSubmit={handleLogin}>
+                    <label>
+                        Username:
+                        <input
+                            type="text"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                        />
+                    </label>
+                    <label>
+                        Password:
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </label>
+                    <button className='btn-login' type="submit">Login</button>
+                    {error && <p className="error-message">{error}</p>}
+                </form>
+            </div>
+        </section>
+    );
+};
+
+export default Login;
