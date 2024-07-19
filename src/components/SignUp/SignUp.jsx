@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './SignUp.css';
+import './Signup.css';
 
 const SignUp = () => {
-    const navigate = useNavigate(); // useNavigate hook initialization
+    const navigate = useNavigate(); 
 
     const [formData, setFormData] = useState({
         username: '',
@@ -34,7 +34,6 @@ const SignUp = () => {
     };
 
     const usernameValidation = () => {
-        // Adjust the regular expression for username requirements (text-only)
         const regEx = /^[a-zA-Z]+$/;
 
         if (regEx.test(username)) {
